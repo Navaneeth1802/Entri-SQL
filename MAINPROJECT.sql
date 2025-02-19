@@ -338,3 +338,9 @@ select Emp_name,Branch_address from Employee
 inner join Branch
 on Branch.Branch_no=Employee.Branch_no
 where position like 'Manager';
+
+#12Display the names of customers who have issued books with a rental price higher than Rs. 25.
+select issued_customer,Rental_price from IssueStatus
+inner join Books
+on IssueStatus.isbn_book=Books.ISBN
+where Rental_price>25;
